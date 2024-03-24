@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="Description" content="めいめい市のホームページです。">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>めいめい市</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header-wrap">
+			<h1 class="site-title">
+				<a href="index.html"><img src="img/logo.png" alt="めいめい市"></a>
+			</h1>
+			<div class="accessibility-wrap">
+				<div class="accessibility-item">
+					<p>文字サイズ</p>
+					<button type="button" id="font-size-btn-1" class="btn bg-purple">拡大</button>
+					<button type="button" id="font-size-btn-2" class="btn">標準</button>
+				</div>
+				<div class="accessibility-item">
+					<p>背景</p>
+					<button type="button" id="bg-btn-1" class="btn bg-purple">黒</button>
+					<button type="button" id="bg-btn-2" class="btn">白</button>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<ul class="pc-menu main-list">
+				<li class="has-child"><a href="#">くらし</a>
+					<ul>
+						<li><a href="#">くらしトップ</a></li>
+						<li><a href="#">戸籍・住民票</a></li>
+						<li><a href="#">ごみ・リサイクル</a></li>
+						<li><a href="#">健康保険・年金</a></li>
+						<li><a href="#">福祉</a></li>
+						<li><a href="#">子育て</a></li>
+					</ul>
+				</li>
+				<li class="has-child"><a href="#">市政</a>
+					<ul>
+						<li><a href="#">市政トップ</a></li>
+						<li><a href="#">条例</a></li>
+						<li><a href="#">組織</a></li>
+						<li><a href="#">SDGs</a></li>
+					</ul>
+				</li>
+				<li class="has-child"><a href="#">ビジネス</a>
+					<ul>
+						<li><a href="#">ビジネストップ</a></li>
+						<li><a href="#">手続き</a></li>
+						<li><a href="#">各種支援</a></li>
+						<li><a href="#">建築</a></li>
+						<li><a href="#">不動産</a></li>
+					</ul>
+				</li>
+				<li class="has-child"><a href="#">観光</a>
+					<ul>
+						<li><a href="#">観光トップ</a></li>
+						<li><a href="#">イベント</a></li>
+						<li><a href="#">施設情報</a></li>
+						<li><a href="#">歴史・文化</a></li>
+						<li><a href="#">スポーツ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<button id="js-hamburger" type="button" class="hamburger" aria-controls="navigation" aria-expanded="false" 	aria-label="メニューを開く">
+        	<span class="hamburger__line"></span>
+      	</button>
+		 <div class="header__nav-area js-nav-area" id="navigation">
+      		<div id="js-global-navigation" class="global-navigation">
+				<ul class="sp-menu main-list">
+					<li class="has-child">
+						<button type="button" class="humberger-menu-btn">くらし</button>
+						<div class="box">
+							<ul class="inner-menu">
+								<li><a href="#">くらしトップ</a></li>
+								<li><a href="#">戸籍・住民票</a></li>
+								<li><a href="#">ごみ・リサイクル</a></li>
+								<li><a href="#">健康保険・年金</a></li>
+								<li><a href="#">福祉</a></li>
+								<li><a href="#">子育て</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="has-child">
+						<button type="button" class="humberger-menu-btn">市政</button>
+						<div class="box">
+							<ul class="inner-menu">
+								<li><a href="#">市政トップ</a></li>
+								<li><a href="#">条例</a></li>
+								<li><a href="#">組織</a></li>
+								<li><a href="#">SDGs</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="has-child">
+						<button type="button" class="humberger-menu-btn">ビジネス</button>
+						<div class="box">
+							<ul class="inner-menu">
+								<li><a href="#">ビジネストップ</a></li>
+								<li><a href="#">手続き</a></li>
+								<li><a href="#">各種支援</a></li>
+								<li><a href="#">建築</a></li>
+								<li><a href="#">不動産</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="has-child">
+						<button type="button" class="humberger-menu-btn">観光</button>
+						<div class="box">
+							<ul class="inner-menu">
+								<li><a href="#">観光トップ</a></li>
+								<li><a href="#">イベント</a></li>
+								<li><a href="#">施設情報</a></li>
+								<li><a href="#">歴史・文化</a></li>
+								<li><a href="#">スポーツ</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div id="js-focus-trap" tabindex="0"></div>
+      		</div>
+    	</div>
+		
+	</header>
+	
+	<main>
+		<section id="mainvisual">
+			<div class="slider-container">
+				<ul id="slider">
+					<li><img src="img/mainvisual-2.jpg" alt=""></li>
+					<li><img src="img/mainvisual-1.jpg" alt=""></li>
+					<li><img src="img/mainvisual-2.jpg" alt=""></li>
+					<li><img src="img/mainvisual-1.jpg" alt=""></li>
+				</ul>
+			</div>
+		</section>
+	
+	</main>
+	
+	<footer>
+	
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
