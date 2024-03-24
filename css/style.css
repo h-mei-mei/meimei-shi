@@ -336,10 +336,6 @@ nav li.has-child ul li a:active{
 /****************************************************/
 /*mainvisual*/
 /****************************************************/
-#mainvisual{
-	max-width:1500px;
-	margin: 0 auto;
-}
 
 .dots-class button {
     display: none;
@@ -355,7 +351,7 @@ nav li.has-child ul li a:active{
 .dots-class {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .dots-class li {
     width: 30px;
