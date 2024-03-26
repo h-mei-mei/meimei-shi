@@ -252,15 +252,20 @@ nav li.has-child ul li a:active{
     left: 0;
     z-index: 9;
 	width: 100%;
+	height: 100%;
     visibility: hidden;
 	opacity: 0;
-    background-color: #fff;
+    background-color: rgba(0,0,0,0.8);
     transition: 0.3s;
-	padding:80px 10px 20px;
 }
 .header__nav-area.-active {
 	opacity: 1;
 	visibility: visible;
+}
+
+.header__nav-area .global-navigation {
+	background-color: #fff;
+	padding:80px 10px 20px;
 }
 .header__nav-area ul.main-list li.has-child {
 	margin: 20px;
@@ -383,44 +388,33 @@ nav li.has-child ul li a:active{
 
 
 /****************************************************/
-/*links*/
+/*important-news*/
 /****************************************************/
-#links{
+#important-news{
 	margin-top: 40px;
 }
-#links ul.links-lists{
-	display: flex;
-	justify-content: space-around;
-	align-items: stretch;
-	flex-wrap: wrap;
+
+#important-news h2{
+	background-color: #b22222;
+	color: #fff;
+	font-size: 3.2rem;
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
 }
-#links ul.links-lists li.links-item{
-	width: 24%;
-}
-#links ul.links-lists li.links-item a{
-	display: flex;
-	align-items: center;
-	background-color: #483d8b;
-	border-radius: 20px;
+#important-news ul{
+	border: 2px solid #b22222;
 	padding: 10px;
 }
-#links ul.links-lists li.links-item .img{
-	width: 70px;
-	height: 70px;
-	margin-right: 5%;
+#important-news ul li{
+	margin-bottom: 10px;
 }
-#links ul.links-lists li.links-item .text{
-	flex: 1;
-	text-align: center;
-	color: #fff;
-	font-size: 2.4rem;
+#important-news ul li:last-child{
+	margin-bottom: none;
 }
-#links ul.links-lists li.links-item .text span{
-	display: block;
-	font-size: 3.6rem;
+#important-news ul li dl a{
+	text-decoration: underline;
 }
-
-
 
 /****************************************************/
 /*darkmode*/
@@ -462,5 +456,9 @@ body.darkmode .header__nav-area {
 	#links ul.links-lists li.links-item{
 		width: 100%;
 		margin-bottom: 20px;
+	}
+
+	#links ul.links-lists li.links-item .text span{
+		display: inline;
 	}
 }
