@@ -34,6 +34,25 @@ hoge4.addEventListener("click",function () {
 );
 
 
+
+/************************************************************/
+
+/*ダークモード関係*/
+
+/************************************************************/
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const darkModeOn = darkModeMediaQuery.matches;
+ 
+darkModeMediaQuery.addListener((e) => {
+    const darkModeOn = e.matches;
+    if (darkModeOn) { // Dark
+        document.body.classList.add("darkmode");
+    } else { // Light
+        document.body.classList.remove("darkmode");
+    }
+});
+
+
 /************************************************************/
 
 /*ここからハンバーガーメニュー*/
@@ -135,7 +154,7 @@ $('.humberger-menu-btn').on('click', function() {//タイトル要素をクリ�
 });
 /************************************************************/
 
-/*ここまでハンバーガーメニュー*/
+/*メインビジュアル*/
 
 /************************************************************/
 $(function () {
@@ -145,7 +164,14 @@ $(function () {
 		autoplay: true,
 		adaptiveHeight: true,
 		dots: true,
-		dotsClass: "dots-class" //ここでclass名を変更する（デフォルトはslick-dots）
-    });
-
+		dotsClass: "dots-class",
+		centerMode: true,
+    	centerPadding: "15%",
+		responsive: [{
+			breakpoint: 1279, // 1280px以下のサイズに適用
+			settings: {
+			centerMode: false,
+        	},
+      	},],
+	});
 });

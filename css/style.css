@@ -36,6 +36,7 @@ body{
 	font-size: 1.6rem;
 	background-color: FFF;
 	color: #333;
+	transition: .3s;
 }
 
 button{
@@ -354,8 +355,8 @@ nav li.has-child ul li a:active{
     margin-top: 20px;
 }
 .dots-class li {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     background-color: #bdb3ff;
     border-radius: 50%;
     margin-right: 10px;
@@ -374,11 +375,12 @@ nav li.has-child ul li a:active{
 /****************************************************/
 /*darkmode*/
 /****************************************************/
+	body.darkmode{
+		background-color: #333333;
+		color: #fff;
+	}
 
-body.darkmode{
-	background-color: #333333;
-	color: #fff;
-}
+
 
 @media screen and (max-width: 750px){
 	header{
