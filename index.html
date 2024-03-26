@@ -5,6 +5,9 @@
 	<meta name="Description" content="めいめい市のホームページです。">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>めいめい市</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
   	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
@@ -20,13 +23,13 @@
 			<div class="accessibility-wrap">
 				<div class="accessibility-item">
 					<p>文字サイズ</p>
-					<button type="button" id="font-size-btn-1" class="btn bg-purple">拡大</button>
-					<button type="button" id="font-size-btn-2" class="btn">標準</button>
+					<button type="button" class="btn bg-purple font-size-btn-1">拡大</button>
+					<button type="button" class="btn font-size-btn-2">標準</button>
 				</div>
 				<div class="accessibility-item">
 					<p>背景</p>
-					<button type="button" id="bg-btn-1" class="btn bg-purple">黒</button>
-					<button type="button" id="bg-btn-2" class="btn">白</button>
+					<button type="button" class="btn bg-purple bg-btn-1">黒</button>
+					<button type="button" class="btn bg-btn-2">白</button>
 				</div>
 			</div>
 		</div>
@@ -126,6 +129,18 @@
 						</div>
 					</li>
 				</ul>
+				<div class="accessibility-wrap">
+					<div class="accessibility-item">
+						<p>文字サイズ</p>
+						<button type="button" class="btn bg-purple font-size-btn-1">拡大</button>
+						<button type="button" class="btn font-size-btn-2">標準</button>
+					</div>
+					<div class="accessibility-item">
+						<p>背景</p>
+						<button type="button" class="btn bg-purple bg-btn-1">黒</button>
+						<button type="button" class="btn bg-btn-2">白</button>
+					</div>
+				</div>
 				<div id="js-focus-trap" tabindex="0"></div>
       		</div>
     	</div>
@@ -140,6 +155,46 @@
 					<li><img src="img/mainvisual-1.jpg" alt=""></li>
 					<li><img src="img/mainvisual-2.jpg" alt=""></li>
 					<li><img src="img/mainvisual-1.jpg" alt=""></li>
+				</ul>
+			</div>
+		</section>
+		
+		
+		<section id="links">
+			<div class="container">
+				<ul class="links-lists">
+					<li class="links-item">
+						<a href="#">
+							<div class="img">
+								<img src="img/kurashi.svg" alt="家のアイコン">
+							</div>
+							<p class="text"><span>くらし</span>について</p>
+						</a>
+					</li>
+					<li class="links-item">
+						<a href="#">
+							<div class="img">
+								<img src="img/sisei.svg" alt="市政のアイコン">
+							</div>
+							<p class="text"><span>市政</span>について</p>
+						</a>
+					</li>
+					<li class="links-item">
+						<a href="#">
+							<div class="img">
+								<img src="img/business.svg" alt="ビジネスのアイコン">
+							</div>
+							<p class="text"><span>ビジネス</span>について</p>
+						</a>
+					</li>
+					<li class="links-item">
+						<a href="#">
+							<div class="img">
+								<img src="img/kankou.svg" alt="観光のアイコン">
+							</div>
+							<p class="text"><span>観光</span>について</p>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</section>

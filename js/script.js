@@ -1,38 +1,26 @@
 // JavaScript Document
 
 //文字サイズ拡大ボタン
-var hoge1;
-hoge1 = document.getElementById('font-size-btn-1');
-hoge1.addEventListener("click",function () {
+$('.font-size-btn-1').on('click', function() {
 	document.documentElement.style.fontSize = '150%';
-  },
-  false
-);
-//文字サイズ標準ボタン
-var hoge2;
-hoge2 = document.getElementById('font-size-btn-2');
-hoge2.addEventListener("click",function () {
-	document.documentElement.style.fontSize = '62.5%';
-  },
-  false
-);
-//背景黒ボタン
-var hoge3;
-hoge3 = document.getElementById('bg-btn-1');
-hoge3.addEventListener("click",function () {
-	document.body.classList.add("darkmode");
-  },
-  false
-);
-//背景白ボタン
-var hoge4;
-hoge4 = document.getElementById('bg-btn-2');
-hoge4.addEventListener("click",function () {
-	document.body.classList.remove("darkmode");
-  },
-  false
-);
+	$('html').css('font-size', '150%');
+});
 
+//文字サイズ標準ボタン
+$('.font-size-btn-2').on('click', function() {
+	document.documentElement.style.fontSize = '150%';
+	$('html').css('font-size', '62.5%');
+});
+
+//背景黒ボタン
+$('.bg-btn-1').on('click', function() {
+	$('body').addClass("darkmode");
+});
+
+//背景白ボタン
+$('.bg-btn-2').on('click', function() {
+	$('body').removeClass("darkmode");
+});
 
 
 /************************************************************/
@@ -55,7 +43,7 @@ darkModeMediaQuery.addListener((e) => {
 
 /************************************************************/
 
-/*ここからハンバーガーメニュー*/
+/*ハンバーガーメニュー*/
 
 /************************************************************/
 // メニュー展開時に背景を固定
