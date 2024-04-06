@@ -79,7 +79,7 @@ header {
 }
 
 .site-title{
-	width: 200px;
+	width: 150px;
 	line-height: 1px;
 }
 .site-title a{
@@ -158,10 +158,10 @@ nav ul li a:hover{
 }
 
 /*下の階層を持っているulの指定*/
-nav li.has-child ul{
+nav ul li.has-child ul{
     /*絶対配置で位置を指定*/
 	position: absolute;
-	left:0;
+	left:-100px;
 	top:52px;
 	z-index: 4;
     /*形状を指定*/
@@ -431,8 +431,6 @@ nav li.has-child ul li a:active{
 	margin-top: 40px;
 }
 
-#topics li{
-}
 
 #topics .topics-list {
   display: flex;
@@ -545,10 +543,27 @@ body.darkmode #topics .topics-item {
 
 	#topics .topics-item {
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 	#topics .topics-item:last-child {
 		margin-bottom: 0;
 	}
 	
 }
+
+/***************************************/
+/* print */
+/***************************************/
+@page {
+  margin: 10mm;
+  size: 210mm 297mm; /* A4縦サイズの場合 */
+}
+@media print {
+  /* 全体設定 */
+  body {
+    -webkit-print-color-adjust: exact; /* 印刷時でも背景色や背景画像を表示 */
+    zoom: 0.65; /* なるべく多くのブラウザで切れないようにするため */
+  }
+
+}
+
