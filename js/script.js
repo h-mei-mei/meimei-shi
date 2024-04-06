@@ -12,12 +12,18 @@
 $("#js-hamburger").on('click', function(){ //ハンバーガーボタンが選択されたら
   $("#js-hamburger").toggleClass("-active");
   $(".js-nav-area").toggleClass("-active");
+	if ($("body").css("overflow") === "hidden") {
+    	$("body").css({ height: "", overflow: "" });
+    } else {
+    	$("body").css({ height: "100%", overflow: "hidden" });
+    }
 });
 
 window.addEventListener('resize', (e) => {//ウィンドウサイズが変更されたらメニューを閉じる
     $("#js-hamburger").removeClass("-active");
     $(".js-nav-area").removeClass("-active");
     $("#js-hamburger").focus();
+    $("body").css({ height: "", overflow: "" });
 });
 
 // フォーカストラップ制御
