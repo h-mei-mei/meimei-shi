@@ -26,11 +26,6 @@ table{
 	border-collapse: collapse;
 }
 
-
-main{
-	min-height:5000px;
-}
-
 body{
 	font-family: "Noto Serif JP", serif;
 	font-weight: 400;
@@ -59,10 +54,30 @@ button{
 }
 
 .sec-title{
-	margin-bottom: 20px;
-	text-align: center;
 	font-size: 3.2rem;
+	display: flex;
+    align-items: center;
+	margin-bottom: 40px;
 }
+
+.sec-title:before,
+.sec-title:after {
+    content: "";
+    height: 2px;
+    flex-grow: 1;
+    background-color: #666;
+}
+
+.sec-title:before {
+    left: 0;
+    background: linear-gradient(-90deg, #333, transparent);
+}
+
+.sec-title:after {
+    right: 0;
+	background: linear-gradient(90deg, #333, transparent);
+}
+
 /****************************************************/
 /*header*/
 /****************************************************/
@@ -429,6 +444,7 @@ nav li.has-child ul li a:active{
 
 #topics{
 	margin-top: 40px;
+	margin-bottom: 80px;
 }
 
 
@@ -486,6 +502,185 @@ nav li.has-child ul li a:active{
    width: 100%;
    height: 100%;
 }
+
+/****************************************************/
+/*news*/
+/****************************************************/
+
+#news {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+}
+#news::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #dedeff;
+    z-index: -1;
+}
+
+#news::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    background-color: #483d8b;
+    transform: skewY(-3deg);
+    z-index: -2;
+}
+
+ul.news-list{
+	background-color: #fff;
+	height: 400px;
+	overflow-y: scroll;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+ul.news-list li.news-item{
+	padding-bottom: 20px;
+}
+ul.news-list li.news-item:last-child{
+	padding-bottom: 0;
+}
+ul.news-list li.news-item a{
+	display: flex;
+	align-items: flex-start;
+}
+ul.news-list li.news-item a .date{
+	width: 130px;
+	padding: 5px;
+	background: #483d8b;
+	color: #fff;
+	text-align: center;
+}
+ul.news-list li.news-item a .title{
+	flex: 1;
+	padding-left: 20px;
+}
+/****************************************************/
+/*benri*/
+/****************************************************/
+#benri{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+ul.benri-list{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+ul.benri-list li.benri-item{
+	width: 32%;
+	margin-bottom: 40px;
+	position: relative;
+}
+ul.benri-list li.benri-item a{
+	padding: 20px;
+	display: flex;
+	border-radius: 20px;
+	background: #eeeeee;
+	box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+
+ul.benri-list li.benri-item a .img{
+	width: 150px;
+}
+ul.benri-list li.benri-item a .text{
+	flex: 1;
+	padding-left: 10px;
+	height:150px;
+	text-align:center;
+	position:relative;
+	font-size: 20px;
+}
+ul.benri-list li.benri-item a .text span{
+	display: block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:100%;
+}
+ul.benri-list li.benri-item::after{
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+  width: 0.4em;   /* arrow size */
+  height: 0.4em;  /* arrow size */
+  border-top: 1px solid #808080;  /* thickness, color */
+  border-right: 1px solid #808080;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+/****************************************************/
+/*footer*/
+/****************************************************/
+footer{
+	padding-top: 80px;
+	background-color: #483d8b;
+	color: #fff;
+}
+footer a{
+	color: #fff;
+}
+footer .footer-box{
+	display: flex;
+}
+footer .footer-item{
+	width: 50%;
+}
+footer .footer-item:first-child{
+	padding: 0 20px;
+}
+
+
+footer iframe{
+	width: 100%;
+	height: 400px;
+}
+
+footer p{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+footer p.text-large{
+	font-size: 42px;
+}
+footer p.text{
+	font-size: 24px;
+}
+
+footer table{
+	width: 100%;
+	margin-top: 20px;
+}
+footer table th, footer table td{
+	border: 1px solid #fff;
+	text-align: center;
+	padding: 10px;
+}
+footer .copyright{
+	text-align: center;
+	padding: 20px;
+}
+
 
 
 /****************************************************/
@@ -549,6 +744,24 @@ body.darkmode #topics .topics-item {
 		margin-bottom: 0;
 	}
 	
+	ul.benri-list{
+		display: flex;
+		flex-direction: column;
+	}
+	ul.benri-list li.benri-item{
+		width: 100%;
+	}
+	
+	footer .footer-box{
+		display: flex;
+		flex-direction: column;
+	}
+	footer .footer-item{
+		width: 100%;
+	}
+	footer .footer-item:first-child{
+		margin-bottom: 20px;
+	}
 }
 
 /***************************************/
