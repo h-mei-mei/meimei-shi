@@ -103,19 +103,6 @@ header {
 	height: 100%;
 }
 
-.accessibility-wrap{
-	display: flex;
-}
-.accessibility-item{
-	display: flex;
-	align-items: center;
-}
-.accessibility-item:first-child{
-	margin-right: 20px;
-}
-.accessibility-item .btn{
-	margin-left: 5px;
-}
 
 .btn{
 	padding: 5px 10px;
@@ -357,16 +344,6 @@ nav li.has-child ul li a:active{
 	color: #fff;
 }
 
-.header__nav-area .accessibility-wrap{
-	flex-direction: column;
-}
-.header__nav-area .accessibility-wrap .accessibility-item{
-	margin: 0 auto;
-}
-.header__nav-area .accessibility-wrap .accessibility-item:first-child{
-	margin-bottom: 20px;
-}
-
 
 /****************************************************/
 /*mainvisual*/
@@ -600,7 +577,7 @@ ul.benri-list li.benri-item a .text{
 	height:150px;
 	text-align:center;
 	position:relative;
-	font-size: 20px;
+	font-size: 2.0rem;
 }
 ul.benri-list li.benri-item a .text span{
 	display: block;
@@ -655,15 +632,14 @@ footer iframe{
 	height: 400px;
 }
 
-footer p{
+footer p.text-large{
 	text-align: center;
 	margin-bottom: 10px;
-}
-
-footer p.text-large{
 	font-size: 42px;
 }
 footer p.text{
+	text-align: center;
+	margin-bottom: 10px;
 	font-size: 20px;
 }
 
@@ -697,9 +673,46 @@ body.darkmode .header__nav-area {
 	color: #fff;
 }
 
+body.darkmode .header__nav-area .global-navigation {
+	background-color: #333333;
+	color: #fff;
+}
+
+body.darkmode #important-news a{
+	color: #fff;
+}
 
 body.darkmode #topics .topics-item {
 	background-color: #000;
+	color: #fff;
+}
+
+body.darkmode ul.news-list{
+	background-color: #333;
+}
+body.darkmode ul.news-list a{
+	color: #fff;
+}
+
+body.darkmode .sec-title:before {
+    left: 0;
+    background: linear-gradient(-90deg, #fff, transparent);
+}
+
+body.darkmode .sec-title:after {
+    right: 0;
+	background: linear-gradient(90deg, #fff, transparent);
+}
+
+body.darkmode #news::before {
+    background-color: #483d8b;
+}
+
+body.darkmode #news::after {
+    background-color: #dedeff;
+}
+body.darkmode ul.benri-list li.benri-item a{
+	background: #333;
 	color: #fff;
 }
 
@@ -715,9 +728,7 @@ body.darkmode #topics .topics-item {
 }
 
 @media screen and (max-width: 750px){
-	.header-wrap .accessibility-wrap{
-		display: none;
-	}
+
 	nav{
 		display: none;
 	}
