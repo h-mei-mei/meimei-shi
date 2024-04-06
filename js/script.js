@@ -22,3 +22,21 @@ $('.bg-btn-2').on('click', function() {
 	$('body').removeClass("darkmode");
 });
 
+
+/************************************************************/
+
+/*ダークモード関係*/
+
+/************************************************************/
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const darkModeOn = darkModeMediaQuery.matches;
+ 
+darkModeMediaQuery.addListener((e) => {
+    const darkModeOn = e.matches;
+    if (darkModeOn) { // Dark
+        document.body.classList.add("darkmode");
+    } else { // Light
+        document.body.classList.remove("darkmode");
+    }
+});
+
